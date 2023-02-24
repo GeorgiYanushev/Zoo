@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Animal_Icon.png" />
+    <None Remove="Assets\Crocodile.jpg" />
+    <None Remove="Assets\Eagle.jfif" />
+    <None Remove="Assets\Elephant.jpg" />
+    <None Remove="Assets\Gorila.jpg" />
+    <None Remove="Assets\Jaguar.jpeg" />
+    <None Remove="Assets\LoginAsset.jpeg" />
+    <None Remove="Assets\TheZoo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Animal_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+    <ProjectReference Include="..\ZooDB\ZooDB.csproj" />
+    <Resource Include="Assets\TheZoo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Themes\" />
+  </ItemGroup>
+
+</Project>

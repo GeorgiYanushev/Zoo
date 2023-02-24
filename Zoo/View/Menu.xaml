@@ -1,0 +1,64 @@
+﻿<Window
+    x:Class="Zoo.View.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Zoo.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Menu"
+    MinWidth="800"
+    MinHeight="650"
+    MaxWidth="1000"
+    MaxHeight="750"
+    
+    FontSize="20">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Offset="1" Color="#FF21B121" />
+                <GradientStop Offset="0" Color="White" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button
+            Grid.Row="0"
+            Margin="20"
+            HorizontalAlignment="Stretch"
+            Click="Button_Click"
+            Content="Animals"
+            FontSize="40"/>
+        <Button
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="20"
+            HorizontalAlignment="Stretch"
+            Click="Button_Click_1"
+            Content="Events"
+            FontSize="40" />
+        <Button
+            Grid.Row="0"
+            Grid.Column="2"
+            Margin="20"
+            HorizontalAlignment="Stretch"
+            Click="Button_Click_2"
+            Content="Tickets"
+            FontSize="40" />
+        <ContentControl
+            x:Name="MainMenu"
+            Grid.Row="1"
+            Grid.ColumnSpan="3"
+            Margin="20"
+            HorizontalAlignment="Stretch"
+            Content=""
+            Visibility="Visible" />
+
+    </Grid>
+</Window>
